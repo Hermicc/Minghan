@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #eef2e6;
+  position: relative;
+  display: flex;
+}
+
+#menu {
+  background: #1c6758;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#menu .logo {
+  display: flex;
+  align-items: center;
+  color: #d6cda4;
+  padding: 30px 0 0 30px;
+}
+#menu .logo img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+#menu .items {
+  margin-top: 40px;
+}
+
+#menu .logo li {
+  list-style: none;
+  padding: 15px 0;
+  transition: 0.3s ease;
+}
+
+#menu .items li:hover {
+  background: #b1d7b4;
+  cursor: pointer;
+}
+#menu .items li:nth-child(1) {
+  border-left: 4px solid #eef2e6;
+}
+
+#menu .items li i {
+  color: #d6cda4;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 10px 10px 25px;
+}
+
+#menu .items li:hover i,
+#menu .items li:hover a {
+  color: #fff;
+}
+#menu .items li a {
+  text-decoration: none;
+  color: #d6cda4;
+  font-weight: 300px;
+  transition: 0.3s ease;
+}
+
+#interface {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  position: relative;
+}
+
+#interface .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 30px;
+  border-bottom: 3px solid #7fb77e;
+  position: fixed;
+  width: calc(100% - 250px);
+}
+#interface .navigation .search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #eef2e6;
+  border-radius: 4px;
+}
+#interface .navigation .search i {
+  margin-right: 14px;
+}
+#interface .navigation .search input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+#interface .navigation .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#interface .navigation .profile i {
+  margin-right: 20px;
+  font-size: 19px;
+  font-weight: 400;
+}
+#interface .navigation .profile img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.n1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#menu-btn {
+  display: none;
+  color: #1c6758;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.i-name {
+  color: #1c6758;
+  padding: 30px 30px 0 30px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 70px;
+}
+.value {
+  padding: 30px 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.value .val-box {
+  background: #fff;
+  width: 235px;
+  padding: 16px 20px;
+  border-radius: 55px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.value .val-box i {
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  margin-right: 15px;
+}
+.value .val-box:nth-child(1) i {
+  background: #7fb77e;
+}
+.value .val-box:nth-child(2) i {
+  background: #8cc0de;
+}
+.value .val-box:nth-child(3) i {
+  background: #ffc090;
+}
+
+.value .val-box:nth-child(4) i {
+  background: #ef9f9f;
+}
+
+.value .val-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.value .val-box span {
+  font-size: 18px;
+  color: #7fb77e;
+}
+.board {
+  width: 95%;
+  margin: 30px 0 30px 30px;
+  overflow: auto;
+  background: #fff;
+  border-radius: 8px;
+}
+.board img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.board h5 {
+  font-weight: 600;
+  font-size: 14px;
+}
+.board p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #7fb77e;
+}
+
+.board .people {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #eef2e6;
+}
+
+thead td {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: #b1d7b4;
+  text-align: start;
+  padding: 15px;
+}
+
+tbody tr td {
+  padding: 10px 15px;
+}
+.active p {
+  background: #fff5e4;
+  padding: 2px 10px;
+  display: inline-block;
+  border-radius: 40px;
+  color: #df7861;
+}
+.edit a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #a084ca;
+  font-weight: 600;
+}
+
+#menu2 {
+  background: #1c6758;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#menu2 .logo {
+  display: flex;
+  align-items: center;
+  color: #d6cda4;
+  padding: 30px 0 0 30px;
+}
+#menu2 .logo img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+#menu2 .items {
+  margin-top: 40px;
+}
+
+#menu2 .logo li {
+  list-style: none;
+  padding: 15px 0;
+  transition: 0.3s ease;
+}
+
+#menu2 .items li:hover {
+  background: #b1d7b4;
+  cursor: pointer;
+}
+#menu2 .items li:nth-child(2) {
+  border-left: 4px solid #eef2e6;
+}
+
+#menu2 .items li i {
+  color: #d6cda4;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 10px 10px 25px;
+}
+
+#menu2 .items li:hover i,
+#menu2 .items li:hover a {
+  color: #fff;
+}
+#menu2 .items li a {
+  text-decoration: none;
+  color: #d6cda4;
+  font-weight: 300px;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 769px) {
+  #menu {
+    width: 230px;
+    position: fixed;
+    left: -230px;
+    transition: 0.3s ease;
+  }
+  #menu.active {
+    left: 0px;
+  }
+  #menu-btn {
+    display: initial;
+  }
+
+  #interface {
+    width: 100%;
+    margin-left: 0px;
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+  #menu.active ~ #interface {
+    width: calc(100% - 230px);
+    margin-left: 230px;
+    transition: 0.3s ease;
+  }
+  #interface .navigation {
+    width: 100%;
+  }
+  .value {
+    padding: 30px 30px 0 30px;
+    justify-content: flex-start;
+  }
+  .value .val-box {
+    padding: 16px 20px;
+    margin: 10px 20px 10px 0;
+  }
+  .board {
+    width: 92%;
+    padding: 0;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+}
+
+@media (max-width: 477px) {
+  #interface .navigation {
+    padding: 15px;
+  }
+  #interface .navigation .search input {
+    width: 150px;
+  }
+  .i-name {
+    padding: 30px 15px 0 15px;
+  }
+  .value {
+    padding: 15px 15px 0 15px;
+  }
+  .value .val-box {
+    width: 100%;
+    margin: 8px 0;
+  }
+  .board {
+    margin: 30px 15px 30px 15px;
+  }
+}
